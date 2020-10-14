@@ -168,9 +168,9 @@ except ImportError:
                 'server_side': server_side,
             }
             if self.supports_set_ciphers:  # Platform-specific: Python 2.7+
-                return wrap_socket(socket, ciphers=self.ciphers, **kwargs)
+                return wrap_socket(socket, ssl_version=PROTOCOL_TLSv1_1, ciphers=self.ciphers, **kwargs)
             else:  # Platform-specific: Python 2.6
-                return wrap_socket(socket, **kwargs)
+                return wrap_socket(socket, ssl_version=PROTOCOL_TLSv1_1, **kwargs)
 
 
 def assert_fingerprint(cert, fingerprint):
