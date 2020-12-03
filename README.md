@@ -1,5 +1,8 @@
 # FetchMuniTimes
+
 Deployment package for an AWS Lamba returning the next times at a selection of stations.
+
+![CodeQL](https://github.com/thomasleplus/FetchMuniTimes/workflows/CodeQL/badge.svg)
 
 This Python Lambda can be mapped to an AWS API Gateway GET Resource with 3 URL parameters:
 * uuid: the UUID of a Transit Tracker created at https://511.org/transit/tracker/overview beforehand
